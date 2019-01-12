@@ -12,6 +12,32 @@ const person2 = new Person('Thiago', 'Paiva');
 console.log(person1); // Person { firstName: 'Thiago', lastName: 'Galvani', fullName: [Function] }
 console.log(person2); // Person { firstName: 'Thiago', lastName: 'Paiva', fullName: [Function] }
 
+// constructor with specific objects
+function Video ({ id, title, thumbnail }) {
+    this.id = id;
+    this.title = title;
+    this.thumbnail = thumbnail;
+
+    this.toString = () => `The video '${this.title}' has the id '${this.id}'`
+}
+
+const video1 = new Video({ 
+    id: 123,
+    duration: 123,
+    thumbnail: 'thumbnail',
+    quality: '720p',
+    title: 'video'
+});
+
+const video2 = new Video({ 
+    id: 456,
+    thumbnail: 'thumbnail',
+    title: 'video'
+});
+
+console.log(video1); // Video { id: 123, title: 'video', thumbnail: 'thumbnail', toString: [Function] }
+console.log(video2); // Video { id: 456, title: 'video', thumbnail: 'thumbnail', toString: [Function] }
+
 // constructor with Prototype
 function Car (model, year, miles) {
     this.model = model;
