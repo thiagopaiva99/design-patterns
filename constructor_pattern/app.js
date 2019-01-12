@@ -59,3 +59,9 @@ const car2 = new Car('Air Cross', 2018, 30000);
 
 console.log(car1.toString());
 console.log(car2.toString());
+
+module.exports = {
+    Person,
+    Video,
+    Car
+};
