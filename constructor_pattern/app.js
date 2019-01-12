@@ -1,3 +1,8 @@
+// object creation
+let newObject = {};
+let newObject = Object.create(Object.prototype);
+let newObject = new Object();
+
 // basic constructors
 function Person (firstName, lastName) {
     this.firstName = firstName;
